@@ -1,0 +1,19 @@
+Soy nadie. Quien eres tu?
+Eres nadie tambien?
+Entonces somos un par, no lo digas!
+Nos desterrarian, ya sabes.
+
+Que aburrido ser alguien!
+Que publico, como una rana,
+Decir tu nombre todo el dia
+A un pantano admirador.
+
+Rust es un lenguaje seguro.
+Rust es rapido y confiable.
+Con Rust puedes programar sin miedo.
+El compilador de rust es tu mejor amigo.
+
+Aprende Rust, domina la memoria.
+Sin garbage collector, sin problemas.
+Ownership y borrowing son la clave.
+El futuro es systems programming.
