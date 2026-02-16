@@ -161,6 +161,58 @@ let y = {
 // y == 4
 ```
 
+### Return explicito vs implicito
+
+En Rust hay dos formas de retornar un valor desde una funcion:
+
+**1. Con `return` (explicito)** - usas la keyword `return` y terminas con `;`
+```rust
+fn es_mayor_de_edad(edad: u32) -> bool {
+    if edad >= 18 {
+        return true;   // return explicito: sale de la funcion inmediatamente
+    }
+    return false;      // return explicito
+}
+```
+
+**2. Sin `return` (implicito)** - la ultima expression (sin `;`) es el valor que retorna
+```rust
+fn es_mayor_de_edad(edad: u32) -> bool {
+    if edad >= 18 {
+        true           // sin ; = expression que se retorna
+    } else {
+        false          // sin ; = expression que se retorna
+    }
+    // ^ todo el bloque if/else es una expression que produce un valor
+}
+```
+
+El segundo caso es el **estilo idiomatico** en Rust. La clave es entender que en Rust casi todo es una expression que produce un valor: bloques `{}`, `if/else`, `match`, etc. La ultima expression sin `;` dentro de un bloque es su valor de retorno.
+
+**Cuidado con el `;`** - si agregas `;` al final, se convierte en statement y retorna `()` (unit type):
+```rust
+fn sumar(a: i32, b: i32) -> i32 {
+    a + b;  // ERROR: esto retorna () en lugar de i32
+            // el ; convierte la expression en statement
+}
+
+fn sumar(a: i32, b: i32) -> i32 {
+    a + b   // OK: sin ; retorna el resultado de a + b
+}
+```
+
+**Cuando usar `return` explicito?** Solo cuando necesitas salir antes de llegar al final de la funcion (early return):
+```rust
+fn buscar_par(numeros: &[i32]) -> Option<i32> {
+    for &n in numeros {
+        if n % 2 == 0 {
+            return Some(n);  // early return: encontramos un par, salimos ya
+        }
+    }
+    None  // si llegamos aqui, no habia ningun par (implicit return)
+}
+```
+
 ---
 
 ## Ejecutar Este Ejemplo
