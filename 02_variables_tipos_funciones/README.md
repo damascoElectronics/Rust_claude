@@ -33,7 +33,7 @@ let espacios = espacios.len(); // usize (numero)
 
 #### Shadowing en Memoria
 
-un tema a tener en concideracion es que en general se pueden crear multiples espacios en memoria casa vez se cera una nueva variable cuando se aplica **shadowing**, aunque Rust libera los anteriores cuando salen del scope.
+Un tema a tener en consideración es que en general se pueden crear múltiples espacios en memoria cada vez que se crea una nueva variable cuando se aplica **shadowing**, aunque Rust libera los anteriores cuando salen del scope.
 
 Veamos los dos casos:
 
@@ -56,7 +56,7 @@ let x = String::from("mundo");   // Heap: asigna NUEVA memoria para "mundo"
 
 ```
 
-Aqui esta lo importante, si se crean dos espacios distintos en el heap, pero el primero se libera inmediatamente cuando el nuevo `x` lo "sombrea", porque el `String` anterior pierde su owner. 
+Aquí está lo importante: sí se crean dos espacios distintos en el heap, pero el primero se libera inmediatamente cuando el nuevo `x` lo "sombrea", porque el `String` anterior pierde su owner. 
 
 Cada vez que haces shadow, el valor anterior se libera (`drop`). Al final solo queda 1 espacio en uso.
 

@@ -59,7 +59,7 @@ fn ejemplo() {
 - Cuando pides memoria, el sistema busca un espacio libre y te da un **pointer** (direccion)
 - **Mas lento** porque tiene que buscar espacio y seguir pointers
 - El tamanio puede ser **dinamico** (crecer/decrecer en runtime)
-- En Rust se libera automaticamente via **ownership** (en C/C++ lo haces manual con malloc)
+- En Rust se libera automáticamente via **ownership** (en C/C++ lo haces manual con malloc/free o new/delete)
 
 ```
 Stack                    Heap
