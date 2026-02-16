@@ -70,28 +70,7 @@ let referencia = &x;           // referencia apunta a "hola"
 
 ```
 El compilador te protege de esta situacion.
----
 
-## Tipos de Datos (Data Types)
-
-Rust es **statically typed** - el compilador debe saber el tipo de cada variable en tiempo de compilacion.
-
-### Scalar Types (Tipos Escalares)
-
-| Tipo | Descripcion | Ejemplos |
-|------|-------------|----------|
-| `i8, i16, i32, i64, i128` | Enteros con signo | `-5, 42, 1_000` |
-| `u8, u16, u32, u64, u128` | Enteros sin signo | `0, 255, 1_000` |
-| `f32, f64` | Punto flotante | `3.14, 2.0` |
-| `bool` | Booleano | `true, false` |
-| `char` | Caracter Unicode | `'a', 'Z', '🦀'` |
-
-```rust
-let entero: i32 = 42;
-let flotante: f64 = 3.14;
-let booleano: bool = true;
-let caracter: char = '🦀';
-```
 
 ### ## Stack vs Heap
 
@@ -177,6 +156,30 @@ Si Rust copiara el heap cada vez, seria lento. Si dejara dos owners apuntando al
 | Liberacion | Automatica al salir del scope | Automatica via `drop()` (ownership) |
 
 Esto es lo que hace a Rust unico: **seguridad de memoria sin garbage collector**, gracias a que el compilador verifica ownership en compile time.
+
+
+---
+
+## Tipos de Datos (Data Types)
+
+Rust es **statically typed** - el compilador debe saber el tipo de cada variable en tiempo de compilacion.
+
+### Scalar Types (Tipos Escalares)
+
+| Tipo | Descripcion | Ejemplos |
+|------|-------------|----------|
+| `i8, i16, i32, i64, i128` | Enteros con signo | `-5, 42, 1_000` |
+| `u8, u16, u32, u64, u128` | Enteros sin signo | `0, 255, 1_000` |
+| `f32, f64` | Punto flotante | `3.14, 2.0` |
+| `bool` | Booleano | `true, false` |
+| `char` | Caracter Unicode | `'a', 'Z', '🦀'` |
+
+```rust
+let entero: i32 = 42;
+let flotante: f64 = 3.14;
+let booleano: bool = true;
+let caracter: char = '🦀';
+```
 
 ### Compound Types (Tipos Compuestos)
 
