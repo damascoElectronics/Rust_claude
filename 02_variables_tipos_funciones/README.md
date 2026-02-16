@@ -31,6 +31,45 @@ let espacios = espacios.len(); // usize (numero)
 
 **Diferencia con `mut`:** Shadowing crea una nueva variable; `mut` modifica la existente.
 
+#### Shadowing en Memoria
+
+un tema a tener en concideracion es que en general se pueden crear multiples espacios en memoria casa vez se cera una nueva variable cuando se aplica **shadowing**, aunque Rust libera los anteriores cuando salen del scope.
+
+Veamos los dos casos:
+
+1. Caso 1: Tipos en el Stack (i32, f64, bool, etc.)
+
+```rust
+let x = 5;       // [Stack: x = 5]
+let x = x + 1;   // [Stack: x = 6]  <- el compilador REUTILIZA o libera el anterior
+let x = x * 2;   // [Stack: x = 12] <- optimizado por el compilador
+```
+
+Para tipos en el stack, el compilador de Rust (via LLVM) optimiza agresivamente. En la practica, el espacio anterior se reutiliza o se elimina porque el compilador detecta que ya no es accesible. En el binario final, probablemente solo exista un espacio con el valor `12`.
+
+2. Caso 2: Tipos en el Heap (String, Vec, etc.)
+
+```rust
+let x = String::from("hola");    // Heap: asigna memoria para "hola"
+let x = String::from("mundo");   // Heap: asigna NUEVA memoria para "mundo"
+                                  // "hola" se LIBERA (drop) porque ya no tiene owner
+
+```
+
+Aqui esta lo importante, si se crean dos espacios distintos en el heap, pero el primero se libera inmediatamente cuando el nuevo `x` lo "sombrea", porque el `String` anterior pierde su owner. 
+
+Cada vez que haces shadow, el valor anterior se libera (`drop`). Al final solo queda 1 espacio en uso.
+
+**Excepcion**: si capturas una referencia antes del shadow
+
+```rust
+let x = String::from("hola");
+let referencia = &x;           // referencia apunta a "hola"
+// let x = String::from("mundo"); // ERROR: no puedes hacer shadow mientras
+                                   // haya una referencia activa a x
+
+```
+El compilador te protege de esta situacion.
 ---
 
 ## Tipos de Datos (Data Types)
