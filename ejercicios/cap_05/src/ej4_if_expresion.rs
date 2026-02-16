@@ -7,34 +7,23 @@
 
 /// Retorna "par" o "impar" usando if como expresion
 pub fn par_o_impar(n: i32) -> &'static str {
-    if n % 2 == 0 { "par" } else { "impar" }
+    todo!("tu código va aquí")
 }
 
 /// Retorna el valor absoluto usando if como expresion
 pub fn valor_absoluto(n: i32) -> i32 {
-    if n >= 0 { n } else { -n }
+    todo!("tu código va aquí")
 }
 
 /// Asigna una calificacion basada en un puntaje:
 /// 90+ -> "A", 80+ -> "B", 70+ -> "C", 60+ -> "D", menos -> "F"
 pub fn calificacion(puntaje: u32) -> &'static str {
-    if puntaje >= 90 {
-        "A"
-    } else if puntaje >= 80 {
-        "B"
-    } else if puntaje >= 70 {
-        "C"
-    } else if puntaje >= 60 {
-        "D"
-    } else {
-        "F"
-    }
+    todo!("tu código va aquí")
 }
 
 /// Retorna el mayor de tres numeros usando if expressions anidados
 pub fn mayor_de_tres(a: i32, b: i32, c: i32) -> i32 {
-    let mayor_ab = if a > b { a } else { b };
-    if mayor_ab > c { mayor_ab } else { c }
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

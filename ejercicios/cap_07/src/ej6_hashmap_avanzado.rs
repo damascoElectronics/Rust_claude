@@ -13,44 +13,23 @@ use std::collections::HashMap;
 /// Dadas dos listas (keys y values), construye un HashMap.
 /// Si tienen diferente largo, usa solo hasta el minimo.
 pub fn zip_a_hashmap(keys: &[&str], values: &[i32]) -> HashMap<String, i32> {
-    let mut mapa = HashMap::new();
-    let min_len = keys.len().min(values.len());
-    for i in 0..min_len {
-        mapa.insert(String::from(keys[i]), values[i]);
-    }
-    mapa
+    todo!("tu código va aquí")
 }
 
 /// Retorna el valor asociado a una key, o un mensaje de error
 pub fn buscar_valor(mapa: &HashMap<String, i32>, key: &str) -> String {
-    match mapa.get(key) {
-        Some(valor) => format!("{}: {}", key, valor),
-        None => format!("{} no encontrado", key),
-    }
+    todo!("tu código va aquí")
 }
 
 /// Agrupa numeros por su resto al dividir entre `divisor`.
 /// Retorna HashMap<i32, Vec<i32>> donde la key es el resto.
 pub fn agrupar_por_resto(numeros: &[i32], divisor: i32) -> HashMap<i32, Vec<i32>> {
-    let mut grupos: HashMap<i32, Vec<i32>> = HashMap::new();
-    for &n in numeros {
-        let resto = n % divisor;
-        grupos.entry(resto).or_insert_with(Vec::new).push(n);
-    }
-    grupos
+    todo!("tu código va aquí")
 }
 
 /// Itera sobre un HashMap y retorna la key con el mayor valor
 pub fn key_del_mayor(mapa: &HashMap<String, i32>) -> Option<String> {
-    let mut mayor_key = None;
-    let mut mayor_valor = None;
-    for (key, &valor) in mapa.iter() {
-        if mayor_valor.is_none() || valor > mayor_valor.unwrap() {
-            mayor_key = Some(key.clone());
-            mayor_valor = Some(valor);
-        }
-    }
-    mayor_key
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

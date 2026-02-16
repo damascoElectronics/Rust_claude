@@ -9,21 +9,13 @@
 /// Usa if let para extraer el valor de un Option.
 /// Si tiene valor, retorna "Valor: X", sino "Sin valor".
 pub fn describir_option(opt: Option<i32>) -> String {
-    if let Some(valor) = opt {
-        format!("Valor: {}", valor)
-    } else {
-        String::from("Sin valor")
-    }
+    todo!("tu código va aquí")
 }
 
 /// Usa while let para sacar elementos de un vector (como stack con pop)
 /// hasta que se vacie, y retorna la suma de todos.
 pub fn sumar_stack(mut stack: Vec<i32>) -> i32 {
-    let mut suma = 0;
-    while let Some(valor) = stack.pop() {
-        suma += valor;
-    }
-    suma
+    todo!("tu código va aquí")
 }
 
 /// Usa if let para procesar solo variantes especificas de un enum
@@ -34,29 +26,12 @@ pub enum Accion {
 }
 
 pub fn ejecutar_accion(accion: &Accion) -> String {
-    if let Accion::Imprimir(texto) = accion {
-        return format!("Imprimiendo: {}", texto);
-    }
-
-    if let Accion::Sumar(a, b) = accion {
-        return format!("Resultado: {}", a + b);
-    }
-
-    String::from("Sin accion")
+    todo!("tu código va aquí")
 }
 
 /// Usa while let para parsear numeros de un iterador hasta encontrar uno invalido
 pub fn parsear_hasta_error(textos: &[&str]) -> Vec<i32> {
-    let mut resultado = Vec::new();
-    let mut iter = textos.iter();
-    while let Some(texto) = iter.next() {
-        if let Ok(numero) = texto.parse::<i32>() {
-            resultado.push(numero);
-        } else {
-            break; // para al primer error
-        }
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

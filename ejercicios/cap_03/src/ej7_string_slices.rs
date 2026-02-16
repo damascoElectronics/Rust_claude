@@ -10,37 +10,22 @@
 /// Retorna la primera palabra de un string (hasta el primer espacio).
 /// Si no hay espacios, retorna todo el string.
 pub fn primera_palabra(s: &str) -> &str {
-    let bytes = s.as_bytes();
-    for (i, &byte) in bytes.iter().enumerate() {
-        if byte == b' ' {
-            return &s[..i];
-        }
-    }
-    s
+    todo!("tu código va aquí")
 }
 
 /// Retorna la ultima palabra de un string (desde el ultimo espacio).
 pub fn ultima_palabra(s: &str) -> &str {
-    let bytes = s.as_bytes();
-    for (i, &byte) in bytes.iter().enumerate().rev() {
-        if byte == b' ' {
-            return &s[i + 1..];
-        }
-    }
-    s
+    todo!("tu código va aquí")
 }
 
 /// Retorna un sub-slice de un array: los elementos desde `inicio` hasta `fin` (exclusive)
 pub fn sub_slice(numeros: &[i32], inicio: usize, fin: usize) -> &[i32] {
-    &numeros[inicio..fin]
+    todo!("tu código va aquí")
 }
 
 /// Cuenta cuantas palabras tiene un string (separadas por espacios)
 pub fn contar_palabras(s: &str) -> usize {
-    if s.trim().is_empty() {
-        return 0;
-    }
-    s.split_whitespace().count()
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

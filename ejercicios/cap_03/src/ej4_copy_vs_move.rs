@@ -9,31 +9,24 @@
 /// Recibe dos i32 (Copy), los suma, y retorna los tres valores.
 /// Como i32 implementa Copy, a y b siguen validos despues de usarlos.
 pub fn sumar_y_retornar(a: i32, b: i32) -> (i32, i32, i32) {
-    let suma = a + b;
-    (a, b, suma) // a y b se copian, siguen disponibles
+    todo!("tu código va aquí")
 }
 
 /// Demuestra que un String se mueve: toma ownership y retorna
 /// el largo y el string original (devolviendo ownership).
 pub fn largo_con_ownership(s: String) -> (usize, String) {
-    let largo = s.len();
-    (largo, s) // retornamos s para devolver ownership
+    todo!("tu código va aquí")
 }
 
 /// Simula el comportamiento de Copy: duplica un valor de tipo Copy
 /// El original sigue siendo valido despues de la copia
 pub fn duplicar_valor(n: i32) -> (i32, i32) {
-    let copia = n; // Copy: n sigue valido
-    (n, copia)
+    todo!("tu código va aquí")
 }
 
 /// Recibe valores de distintos tipos Copy y retorna un resumen
 pub fn resumen_tipos(entero: i32, flotante: f64, booleano: bool, caracter: char) -> String {
-    // Todos estos tipos implementan Copy, se pueden usar multiples veces
-    format!(
-        "entero={}, flotante={}, bool={}, char='{}'",
-        entero, flotante, booleano, caracter
-    )
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

@@ -14,22 +14,19 @@ pub struct Par<T, U> {
 
 impl<T, U> Par<T, U> {
     pub fn new(primero: T, segundo: U) -> Self {
-        Par { primero, segundo }
+        todo!("tu código va aquí")
     }
 
     /// Intercambia los tipos: Par<T, U> -> Par<U, T>
     pub fn intercambiar(self) -> Par<U, T> {
-        Par {
-            primero: self.segundo,
-            segundo: self.primero,
-        }
+        todo!("tu código va aquí")
     }
 }
 
 /// Implementacion solo para Par<String, i32> (tipo concreto)
 impl Par<String, i32> {
     pub fn describir(&self) -> String {
-        format!("{} ({})", self.primero, self.segundo)
+        todo!("tu código va aquí")
     }
 }
 
@@ -39,7 +36,7 @@ where
     T: std::fmt::Display,
     U: std::fmt::Display,
 {
-    format!("({}, {})", par.primero, par.segundo)
+    todo!("tu código va aquí")
 }
 
 /// Funcion generica con multiples bounds usando where
@@ -47,16 +44,7 @@ pub fn mayor_y_mostrar<T>(lista: &[T]) -> Option<String>
 where
     T: PartialOrd + Copy + std::fmt::Display,
 {
-    if lista.is_empty() {
-        return None;
-    }
-    let mut max = lista[0];
-    for &item in &lista[1..] {
-        if item > max {
-            max = item;
-        }
-    }
-    Some(format!("El mayor es: {}", max))
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

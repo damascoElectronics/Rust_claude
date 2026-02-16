@@ -20,29 +20,27 @@ pub mod animales {
 
         impl Perro {
             pub fn new(nombre: &str) -> Self {
-                Perro { nombre: String::from(nombre) }
+                todo!("tu código va aquí")
             }
 
             pub fn hablar(&self) -> String {
-                format!("{} dice: guau!", self.nombre)
+                todo!("tu código va aquí")
             }
         }
 
         impl Gato {
             pub fn new(nombre: &str) -> Self {
-                Gato { nombre: String::from(nombre) }
+                todo!("tu código va aquí")
             }
 
             pub fn hablar(&self) -> String {
-                format!("{} dice: miau!", self.nombre)
+                todo!("tu código va aquí")
             }
         }
 
         /// Usa super:: para acceder al modulo padre
         pub fn contar_animales() -> String {
-            // super:: sube un nivel (a animales)
-            // Desde aqui podriamos acceder a super::acuaticos si quisieramos
-            String::from("terrestres: perros y gatos")
+            todo!("tu código va aquí")
         }
     }
 
@@ -53,21 +51,18 @@ pub mod animales {
 
         impl Pez {
             pub fn new(especie: &str) -> Self {
-                Pez { especie: String::from(especie) }
+                todo!("tu código va aquí")
             }
 
             pub fn habitat(&self) -> String {
-                format!("{} vive en el agua", self.especie)
+                todo!("tu código va aquí")
             }
         }
     }
 
     /// Funcion que usa items de sub-modulos con paths relativos
     pub fn resumen() -> String {
-        // use self:: para referir al modulo actual
-        let perro = self::terrestres::Perro::new("Rex");
-        let pez = self::acuaticos::Pez::new("Nemo");
-        format!("{} y {}", perro.hablar(), pez.habitat())
+        todo!("tu código va aquí")
     }
 }
 
@@ -78,9 +73,7 @@ pub mod presentacion {
     use super::animales::acuaticos::Pez;
 
     pub fn crear_presentacion() -> String {
-        let p = PerroTerrestre::new("Firulais");
-        let f = Pez::new("Doris");
-        format!("{} | {}", p.hablar(), f.habitat())
+        todo!("tu código va aquí")
     }
 }
 

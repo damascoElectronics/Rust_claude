@@ -10,46 +10,28 @@
 
 /// Construye un String caracter por caracter usando push()
 pub fn construir_abecedario(hasta: char) -> String {
-    let mut resultado = String::new();
-    for c in 'a'..=hasta {
-        resultado.push(c);
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 /// Usa format! para crear un string formateado con multiples valores
 pub fn ficha_persona(nombre: &str, edad: u32, ciudad: &str) -> String {
-    format!("Nombre: {} | Edad: {} | Ciudad: {}", nombre, edad, ciudad)
+    todo!("tu código va aquí")
 }
 
 /// Cuenta vocales en un string usando .chars()
 pub fn contar_vocales(texto: &str) -> usize {
-    texto
-        .chars()
-        .filter(|c| "aeiouAEIOU".contains(*c))
-        .count()
+    todo!("tu código va aquí")
 }
 
 /// Invierte cada palabra individualmente pero mantiene el orden de palabras.
 /// "hola mundo" -> "aloh odnum"
 pub fn invertir_palabras(texto: &str) -> String {
-    texto
-        .split_whitespace()
-        .map(|palabra| palabra.chars().rev().collect::<String>())
-        .collect::<Vec<String>>()
-        .join(" ")
+    todo!("tu código va aquí")
 }
 
 /// Usa push_str para concatenar partes con un separador
 pub fn unir_con_separador(partes: &[&str], sep: &str) -> String {
-    let mut resultado = String::new();
-    for (i, parte) in partes.iter().enumerate() {
-        resultado.push_str(parte);
-        if i < partes.len() - 1 {
-            resultado.push_str(sep);
-        }
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

@@ -9,53 +9,29 @@
 
 /// Usa for con range para sumar todos los numeros de 1 a n (inclusive)
 pub fn suma_hasta(n: u32) -> u32 {
-    let mut suma = 0;
-    for i in 1..=n {
-        suma += i;
-    }
-    suma
+    todo!("tu código va aquí")
 }
 
 /// Usa enumerate para encontrar el indice del primer numero negativo.
 /// Retorna None si no hay negativos.
 pub fn indice_primer_negativo(numeros: &[i32]) -> Option<usize> {
-    for (i, &n) in numeros.iter().enumerate() {
-        if n < 0 {
-            return Some(i);
-        }
-    }
-    None
+    todo!("tu código va aquí")
 }
 
 /// Usa rev() para invertir un string caracter por caracter
 pub fn invertir_string(texto: &str) -> String {
-    let mut resultado = String::new();
-    for c in texto.chars().rev() {
-        resultado.push(c);
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 /// Usa for para iterar sobre una coleccion y construir un string
 /// con el formato "1. elemento\n2. elemento\n..."
 pub fn lista_numerada(elementos: &[&str]) -> String {
-    let mut resultado = String::new();
-    for (i, &elem) in elementos.iter().enumerate() {
-        resultado.push_str(&format!("{}. {}", i + 1, elem));
-        if i < elementos.len() - 1 {
-            resultado.push('\n');
-        }
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 /// Usa for con range para generar los primeros `n` numeros pares (empezando en 2)
 pub fn primeros_pares(n: usize) -> Vec<i32> {
-    let mut pares = Vec::new();
-    for i in 1..=n {
-        pares.push((i as i32) * 2);
-    }
-    pares
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

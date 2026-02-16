@@ -11,25 +11,25 @@ pub struct Color(pub u8, pub u8, pub u8);
 
 impl Color {
     pub fn rojo() -> Self {
-        Color(255, 0, 0)
+        todo!("tu código va aquí")
     }
 
     pub fn verde() -> Self {
-        Color(0, 255, 0)
+        todo!("tu código va aquí")
     }
 
     pub fn azul() -> Self {
-        Color(0, 0, 255)
+        todo!("tu código va aquí")
     }
 
     /// Retorna el color como string hex "#RRGGBB"
     pub fn a_hex(&self) -> String {
-        format!("#{:02X}{:02X}{:02X}", self.0, self.1, self.2)
+        todo!("tu código va aquí")
     }
 
     /// Retorna true si es un tono de gris (R == G == B)
     pub fn es_gris(&self) -> bool {
-        self.0 == self.1 && self.1 == self.2
+        todo!("tu código va aquí")
     }
 }
 
@@ -44,27 +44,16 @@ pub struct Config {
 impl Config {
     /// Crea una config por defecto
     pub fn default() -> Self {
-        Config {
-            ancho: 800,
-            alto: 600,
-            titulo: String::from("Mi App"),
-            fullscreen: false,
-        }
+        todo!("tu código va aquí")
     }
 
     /// Crea una config nueva usando update syntax (..) desde otra config
     pub fn con_titulo(base: Config, titulo: &str) -> Self {
-        Config {
-            titulo: String::from(titulo),
-            ..base // usa el resto de campos de base
-        }
+        todo!("tu código va aquí")
     }
 
     pub fn descripcion(&self) -> String {
-        format!(
-            "{}x{} '{}' fullscreen={}",
-            self.ancho, self.alto, self.titulo, self.fullscreen
-        )
+        todo!("tu código va aquí")
     }
 }
 

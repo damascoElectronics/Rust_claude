@@ -9,30 +9,18 @@
 /// Recibe un String, lo clona, modifica el clon y retorna ambos.
 /// El original no se modifica.
 pub fn clonar_y_modificar(original: &String) -> (String, String) {
-    let mut clon = original.clone();
-    clon.push_str(" (clon)");
-    (original.clone(), clon)
+    todo!("tu código va aquí")
 }
 
 /// Clona un vector y agrega un elemento al clon.
 /// Retorna (original_len, clon_len) para demostrar que son independientes.
 pub fn clonar_vec(original: &Vec<i32>, nuevo_elemento: i32) -> (usize, usize) {
-    let mut clon = original.clone();
-    clon.push(nuevo_elemento);
-    (original.len(), clon.len())
+    todo!("tu código va aquí")
 }
 
 /// Crea copias independientes de un String y las concatena
 pub fn repetir_string(texto: &str, veces: usize) -> String {
-    let base = String::from(texto);
-    let mut resultado = String::new();
-    for i in 0..veces {
-        resultado.push_str(&base.clone());
-        if i < veces - 1 {
-            resultado.push(' ');
-        }
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

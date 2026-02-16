@@ -9,53 +9,25 @@
 /// Usa `loop` con break para encontrar el primer multiplo de `divisor`
 /// mayor o igual a `minimo`. loop retorna el valor via break.
 pub fn primer_multiplo(divisor: u32, minimo: u32) -> u32 {
-    let mut n = minimo;
-    loop {
-        if n % divisor == 0 {
-            break n; // loop retorna este valor
-        }
-        n += 1;
-    }
+    todo!("tu código va aquí")
 }
 
 /// Usa `while` para contar cuantas veces se puede dividir `n` entre 2
 /// antes de que sea menor a 1
 pub fn contar_divisiones(mut n: f64) -> u32 {
-    let mut count = 0;
-    while n >= 1.0 {
-        n /= 2.0;
-        count += 1;
-    }
-    count
+    todo!("tu código va aquí")
 }
 
 /// Usa loop labels para buscar un valor en una "matriz" (Vec de Vecs).
 /// Retorna Some((fila, columna)) si lo encuentra, None si no.
 pub fn buscar_en_matriz(matriz: &Vec<Vec<i32>>, objetivo: i32) -> Option<(usize, usize)> {
-    let mut resultado = None;
-    'filas: for (i, fila) in matriz.iter().enumerate() {
-        for (j, &valor) in fila.iter().enumerate() {
-            if valor == objetivo {
-                resultado = Some((i, j));
-                break 'filas; // sale de ambos loops
-            }
-        }
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 /// Usa while para implementar una cuenta regresiva
 /// Retorna un string como "3, 2, 1, despegue!"
 pub fn cuenta_regresiva(desde: u32) -> String {
-    let mut resultado = String::new();
-    let mut n = desde;
-    while n > 0 {
-        resultado.push_str(&n.to_string());
-        resultado.push_str(", ");
-        n -= 1;
-    }
-    resultado.push_str("despegue!");
-    resultado
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

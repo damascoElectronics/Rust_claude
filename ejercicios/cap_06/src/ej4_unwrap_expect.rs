@@ -11,41 +11,30 @@
 /// Usa unwrap_or para parsear un string a i32.
 /// Si falla el parseo, retorna el valor por defecto dado.
 pub fn parsear_o_default(texto: &str, default: i32) -> i32 {
-    texto.parse::<i32>().unwrap_or(default)
+    todo!("tu código va aquí")
 }
 
 /// Usa unwrap_or_else para obtener un valor de un Option.
 /// Si es None, calcula el valor por defecto con una closure.
 pub fn obtener_o_calcular(opt: Option<i32>, base: i32) -> i32 {
-    opt.unwrap_or_else(|| base * 2)
+    todo!("tu código va aquí")
 }
 
 /// Usa is_ok/is_err para contar cuantos strings son numeros validos
 pub fn contar_numeros_validos(textos: &[&str]) -> (usize, usize) {
-    let mut validos = 0;
-    let mut invalidos = 0;
-    for texto in textos {
-        if texto.parse::<i32>().is_ok() {
-            validos += 1;
-        } else {
-            invalidos += 1;
-        }
-    }
-    (validos, invalidos)
+    todo!("tu código va aquí")
 }
 
 /// Usa map() en Option para transformar el valor interno sin sacarlo.
 /// Retorna el largo del string si existe, o None.
 pub fn largo_opcional(texto: Option<&str>) -> Option<usize> {
-    texto.map(|t| t.len())
+    todo!("tu código va aquí")
 }
 
 /// Usa and_then() para encadenar operaciones que pueden fallar.
 /// Parsea un string a i32, y si es positivo retorna Some(n), sino None.
 pub fn parsear_positivo(texto: &str) -> Option<i32> {
-    texto.parse::<i32>().ok().and_then(|n| {
-        if n > 0 { Some(n) } else { None }
-    })
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

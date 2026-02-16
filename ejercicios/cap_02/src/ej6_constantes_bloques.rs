@@ -12,42 +12,26 @@ const MINUTOS_POR_HORA: u32 = 60;
 
 /// Calcula cuantos km recorre la luz en `segundos` segundos
 pub fn distancia_luz(segundos: f64) -> f64 {
-    VELOCIDAD_LUZ_KMS * segundos
+    todo!("tu código va aquí")
 }
 
 /// Convierte horas a segundos usando las constantes definidas
 pub fn horas_a_segundos(horas: u32) -> u32 {
-    horas * MINUTOS_POR_HORA * SEGUNDOS_POR_MINUTO
+    todo!("tu código va aquí")
 }
 
 /// Usa una block expression para calcular el IMC y retornar la categoria.
 /// IMC = peso / (altura * altura)
 /// < 18.5 -> "bajo peso", 18.5..25.0 -> "normal", 25.0..30.0 -> "sobrepeso", >= 30.0 -> "obesidad"
 pub fn categoria_imc(peso_kg: f64, altura_m: f64) -> &'static str {
-    let categoria = {
-        let imc = peso_kg / (altura_m * altura_m);
-        if imc < 18.5 {
-            "bajo peso"
-        } else if imc < 25.0 {
-            "normal"
-        } else if imc < 30.0 {
-            "sobrepeso"
-        } else {
-            "obesidad"
-        }
-    };
-    categoria
+    todo!("tu código va aquí")
 }
 
 /// Demuestra statements vs expressions:
 /// Calcula el area de un triangulo usando una block expression
 /// area = (base * altura) / 2
 pub fn area_triangulo(base: f64, altura: f64) -> f64 {
-    let area = {
-        let producto = base * altura;
-        producto / 2.0 // expression: retorna el valor (sin ;)
-    };
-    area
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

@@ -12,37 +12,37 @@ pub struct Contador {
 
 impl Contador {
     pub fn new() -> Self {
-        Contador { valor: 0 }
+        todo!("tu código va aquí")
     }
 
     pub fn new_con_valor(valor: i32) -> Self {
-        Contador { valor }
+        todo!("tu código va aquí")
     }
 
     /// &self - solo lectura
     pub fn valor(&self) -> i32 {
-        self.valor
+        todo!("tu código va aquí")
     }
 
     /// &mut self - modifica el contador
     pub fn incrementar(&mut self) {
-        self.valor += 1;
+        todo!("tu código va aquí")
     }
 
     /// &mut self - modifica el contador por una cantidad
     pub fn incrementar_por(&mut self, cantidad: i32) {
-        self.valor += cantidad;
+        todo!("tu código va aquí")
     }
 
     /// &mut self - resetea a cero
     pub fn reset(&mut self) {
-        self.valor = 0;
+        todo!("tu código va aquí")
     }
 
     /// self - consume el contador y retorna el valor final.
     /// Despues de llamar esto, el Contador ya no existe.
     pub fn consumir(self) -> i32 {
-        self.valor
+        todo!("tu código va aquí")
     }
 }
 
@@ -52,22 +52,22 @@ pub struct CadenaBuilder {
 
 impl CadenaBuilder {
     pub fn new() -> Self {
-        CadenaBuilder { partes: Vec::new() }
+        todo!("tu código va aquí")
     }
 
     /// &mut self - agrega una parte
     pub fn agregar(&mut self, texto: &str) {
-        self.partes.push(String::from(texto));
+        todo!("tu código va aquí")
     }
 
     /// &self - cuantas partes tiene
     pub fn cantidad(&self) -> usize {
-        self.partes.len()
+        todo!("tu código va aquí")
     }
 
     /// self - consume el builder y retorna el string final unido
     pub fn construir(self, separador: &str) -> String {
-        self.partes.join(separador)
+        todo!("tu código va aquí")
     }
 }
 

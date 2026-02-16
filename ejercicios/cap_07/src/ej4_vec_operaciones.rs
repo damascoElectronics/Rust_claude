@@ -10,40 +10,24 @@
 /// Simula una pila (stack) usando Vec: push varios valores, pop uno,
 /// retorna (elementos_restantes, elemento_sacado)
 pub fn operaciones_stack(valores: &[i32]) -> (Vec<i32>, Option<i32>) {
-    let mut stack = Vec::new();
-    for &v in valores {
-        stack.push(v);
-    }
-    let sacado = stack.pop();
-    (stack, sacado)
+    todo!("tu código va aquí")
 }
 
 /// Acceso seguro con get(): retorna el elemento en `indice`
 /// o "fuera de rango" si no existe
 pub fn acceso_seguro(vec: &[i32], indice: usize) -> String {
-    match vec.get(indice) {
-        Some(valor) => format!("Encontrado: {}", valor),
-        None => String::from("fuera de rango"),
-    }
+    todo!("tu código va aquí")
 }
 
 /// Multiplica cada elemento del vector por 2 usando iteracion mutable
 pub fn duplicar_elementos(vec: &mut Vec<i32>) {
-    for elem in vec.iter_mut() {
-        *elem *= 2;
-    }
+    todo!("tu código va aquí")
 }
 
 /// Retorna un nuevo Vec con solo los elementos unicos (sin duplicados),
 /// manteniendo el orden de primera aparicion
 pub fn unicos(vec: &[i32]) -> Vec<i32> {
-    let mut resultado = Vec::new();
-    for &n in vec {
-        if !resultado.contains(&n) {
-            resultado.push(n);
-        }
-    }
-    resultado
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

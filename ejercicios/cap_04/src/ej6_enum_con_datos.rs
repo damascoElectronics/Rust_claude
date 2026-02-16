@@ -15,19 +15,11 @@ pub enum Forma {
 
 impl Forma {
     pub fn area(&self) -> f64 {
-        match self {
-            Forma::Circulo(radio) => std::f64::consts::PI * radio * radio,
-            Forma::Rectangulo(ancho, alto) => ancho * alto,
-            Forma::Triangulo { base, altura } => base * altura / 2.0,
-        }
+        todo!("tu código va aquí")
     }
 
     pub fn nombre(&self) -> &str {
-        match self {
-            Forma::Circulo(_) => "circulo",
-            Forma::Rectangulo(_, _) => "rectangulo",
-            Forma::Triangulo { .. } => "triangulo",
-        }
+        todo!("tu código va aquí")
     }
 }
 
@@ -41,12 +33,7 @@ pub enum Mensaje {
 
 impl Mensaje {
     pub fn describir(&self) -> String {
-        match self {
-            Mensaje::Salir => String::from("Comando: salir"),
-            Mensaje::Texto(t) => format!("Texto: {}", t),
-            Mensaje::Mover { x, y } => format!("Mover a ({}, {})", x, y),
-            Mensaje::Color(r, g, b) => format!("Color: rgb({}, {}, {})", r, g, b),
-        }
+        todo!("tu código va aquí")
     }
 }
 

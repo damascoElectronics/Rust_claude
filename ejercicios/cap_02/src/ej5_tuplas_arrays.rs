@@ -8,31 +8,22 @@
 
 /// Retorna una tupla (min, max) de dos numeros
 pub fn min_max(a: i32, b: i32) -> (i32, i32) {
-    if a <= b {
-        (a, b)
-    } else {
-        (b, a)
-    }
+    todo!("tu código va aquí")
 }
 
 /// Recibe una tupla (nombre, edad) y retorna un string formateado
 pub fn presentar(persona: (&str, u32)) -> String {
-    let (nombre, edad) = persona;
-    format!("{} tiene {} anios", nombre, edad)
+    todo!("tu código va aquí")
 }
 
 /// Retorna la suma de todos los elementos de un array de 5 elementos
 pub fn suma_array(numeros: [i32; 5]) -> i32 {
-    let mut suma = 0;
-    for &n in numeros.iter() {
-        suma += n;
-    }
-    suma
+    todo!("tu código va aquí")
 }
 
 /// Crea y retorna un array de tamanio 5 donde todos los elementos son `valor`
 pub fn crear_array_repetido(valor: i32) -> [i32; 5] {
-    [valor; 5]
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

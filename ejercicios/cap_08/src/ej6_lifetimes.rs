@@ -10,11 +10,7 @@
 /// Necesita lifetime 'a porque retorna una referencia que podria
 /// venir de x o de y, y el compilador necesita saber cuanto vive.
 pub fn mas_largo<'a>(x: &'a str, y: &'a str) -> &'a str {
-    if x.len() >= y.len() {
-        x
-    } else {
-        y
-    }
+    todo!("tu código va aquí")
 }
 
 /// Retorna la primera parte de un string hasta un separador.
@@ -22,10 +18,7 @@ pub fn mas_largo<'a>(x: &'a str, y: &'a str) -> &'a str {
 /// Lifetime implicito: el compilador infiere que el retorno
 /// vive tanto como el input.
 pub fn antes_de(texto: &str, separador: char) -> &str {
-    match texto.find(separador) {
-        Some(pos) => &texto[..pos],
-        None => texto,
-    }
+    todo!("tu código va aquí")
 }
 
 /// Struct que contiene una referencia - necesita lifetime annotation.
@@ -36,21 +29,17 @@ pub struct Extracto<'a> {
 
 impl<'a> Extracto<'a> {
     pub fn new(texto: &'a str) -> Self {
-        Extracto { contenido: texto }
+        todo!("tu código va aquí")
     }
 
     /// Retorna las primeras `n` palabras del extracto
     pub fn primeras_palabras(&self, n: usize) -> String {
-        self.contenido
-            .split_whitespace()
-            .take(n)
-            .collect::<Vec<&str>>()
-            .join(" ")
+        todo!("tu código va aquí")
     }
 
     /// Retorna el largo del contenido
     pub fn largo(&self) -> usize {
-        self.contenido.len()
+        todo!("tu código va aquí")
     }
 }
 
@@ -62,15 +51,11 @@ pub struct Comparador<'a, 'b> {
 
 impl<'a, 'b> Comparador<'a, 'b> {
     pub fn son_iguales(&self) -> bool {
-        self.izquierda == self.derecha
+        todo!("tu código va aquí")
     }
 
     pub fn cual_es_mayor(&self) -> &str {
-        if self.izquierda.len() >= self.derecha.len() {
-            self.izquierda
-        } else {
-            self.derecha
-        }
+        todo!("tu código va aquí")
     }
 }
 

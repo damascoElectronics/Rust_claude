@@ -34,33 +34,19 @@ impl From<ParseIntError> for AppError {
 /// Parsea un string a i32, valida que sea positivo, y retorna su cuadrado.
 /// Usa ? para propagar el error de parseo y valida manualmente.
 pub fn parsear_y_cuadrado(texto: &str) -> Result<i32, AppError> {
-    let n: i32 = texto.parse()?; // ? convierte ParseIntError a AppError via From
-    if n <= 0 {
-        return Err(AppError::Validacion(String::from("debe ser positivo")));
-    }
-    Ok(n * n)
+    todo!("tu código va aquí")
 }
 
 /// Procesa una lista de strings: parsea cada uno, suma los resultados.
 /// Se detiene al primer error.
 pub fn sumar_textos(textos: &[&str]) -> Result<i32, AppError> {
-    let mut suma = 0;
-    for texto in textos {
-        let n: i32 = texto.parse()?;
-        suma += n;
-    }
-    Ok(suma)
+    todo!("tu código va aquí")
 }
 
 /// Cadena de operaciones: parsea dos strings, los divide.
 /// Puede fallar por parseo o por division por cero.
 pub fn dividir_textos(texto_a: &str, texto_b: &str) -> Result<f64, AppError> {
-    let a: i32 = texto_a.parse()?;
-    let b: i32 = texto_b.parse()?;
-    if b == 0 {
-        return Err(AppError::Validacion(String::from("division por cero")));
-    }
-    Ok(a as f64 / b as f64)
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

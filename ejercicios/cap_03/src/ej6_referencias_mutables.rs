@@ -9,31 +9,23 @@
 
 /// Duplica el valor de un entero a traves de una referencia mutable
 pub fn duplicar(n: &mut i32) {
-    *n *= 2;
+    todo!("tu código va aquí")
 }
 
 /// Agrega un elemento al final de un vector via referencia mutable
 /// y retorna el nuevo largo
 pub fn agregar_y_contar(vec: &mut Vec<i32>, valor: i32) -> usize {
-    vec.push(valor);
-    vec.len()
+    todo!("tu código va aquí")
 }
 
 /// Pone en mayusculas la primera letra de un String via &mut String
 pub fn capitalizar(texto: &mut String) {
-    if let Some(primera) = texto.chars().next() {
-        let resto = texto[primera.len_utf8()..].to_string();
-        *texto = primera.to_uppercase().to_string() + &resto;
-    }
+    todo!("tu código va aquí")
 }
 
 /// Reemplaza todos los negativos en un slice con cero
 pub fn limpiar_negativos(numeros: &mut [i32]) {
-    for n in numeros.iter_mut() {
-        if *n < 0 {
-            *n = 0;
-        }
-    }
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]

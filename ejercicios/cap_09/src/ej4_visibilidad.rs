@@ -18,51 +18,36 @@ pub mod banco {
 
     impl CuentaBancaria {
         pub fn new(titular: &str, numero: u64) -> Self {
-            CuentaBancaria {
-                titular: String::from(titular),
-                saldo: 0.0,
-                numero,
-            }
+            todo!("tu código va aquí")
         }
 
         pub fn titular(&self) -> &str {
-            &self.titular
+            todo!("tu código va aquí")
         }
 
         pub fn saldo(&self) -> f64 {
-            self.saldo
+            todo!("tu código va aquí")
         }
 
         pub fn depositar(&mut self, monto: f64) -> Result<f64, &'static str> {
-            if monto <= 0.0 {
-                return Err("monto debe ser positivo");
-            }
-            self.saldo += monto;
-            Ok(self.saldo)
+            todo!("tu código va aquí")
         }
 
         pub fn retirar(&mut self, monto: f64) -> Result<f64, &'static str> {
-            if monto <= 0.0 {
-                return Err("monto debe ser positivo");
-            }
-            if monto > self.saldo {
-                return Err("saldo insuficiente");
-            }
-            self.saldo -= monto;
-            Ok(self.saldo)
+            todo!("tu código va aquí")
         }
     }
 
     /// Sub-modulo con visibilidad pub(super) - solo visible desde `banco`
     mod auditor {
         pub(super) fn verificar_saldo(saldo: f64) -> bool {
-            saldo >= 0.0
+            todo!("tu código va aquí")
         }
     }
 
     /// Funcion publica que usa el modulo privado internamente
     pub fn es_cuenta_valida(cuenta: &CuentaBancaria) -> bool {
-        auditor::verificar_saldo(cuenta.saldo)
+        todo!("tu código va aquí")
     }
 }
 

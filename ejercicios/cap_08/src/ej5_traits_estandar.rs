@@ -19,23 +19,23 @@ pub struct Punto {
 
 impl Punto {
     pub fn new(x: f64, y: f64) -> Self {
-        Punto { x, y }
+        todo!("tu código va aquí")
     }
 
     pub fn distancia_al_origen(&self) -> f64 {
-        (self.x * self.x + self.y * self.y).sqrt()
+        todo!("tu código va aquí")
     }
 }
 
 impl Default for Punto {
     fn default() -> Self {
-        Punto { x: 0.0, y: 0.0 }
+        todo!("tu código va aquí")
     }
 }
 
 impl fmt::Display for Punto {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        write!(f, "({}, {})", self.x, self.y)
+        todo!("tu código va aquí")
     }
 }
 
@@ -49,17 +49,13 @@ pub struct Configuracion {
 
 impl Default for Configuracion {
     fn default() -> Self {
-        Configuracion {
-            intentos: 3,
-            timeout_ms: 5000,
-            verbose: false,
-        }
+        todo!("tu código va aquí")
     }
 }
 
 /// Funcion que acepta cualquier tipo Debug + Display
 pub fn log_valor<T: fmt::Debug + fmt::Display>(valor: &T) -> String {
-    format!("Display: {} | Debug: {:?}", valor, valor)
+    todo!("tu código va aquí")
 }
 
 #[cfg(test)]
