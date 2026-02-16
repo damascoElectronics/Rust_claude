@@ -1,0 +1,12 @@
+[workspace]
+members = [
+    "cap_02",
+    "cap_03",
+    "cap_04",
+    "cap_05",
+    "cap_06",
+    "cap_07",
+    "cap_08",
+    "cap_09",
+]
+resolver = "2"
