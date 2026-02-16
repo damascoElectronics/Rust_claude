@@ -93,6 +93,91 @@ let booleano: bool = true;
 let caracter: char = '🦀';
 ```
 
+### ## Stack vs Heap
+
+Son las dos zonas de memoria que usa tu programa:
+
+### Stack (La Pila)
+
+- Funciona como una **pila de platos**: el ultimo que pones es el primero que sacas (LIFO)
+- **Super rapido** porque solo agrega/quita del tope
+- El tamanio de cada dato **debe conocerse en compile time**
+- Se libera automaticamente cuando la funcion termina
+
+```
+Stack (crece hacia abajo)
+┌─────────────┐
+│  z = true   │  <- tope (ultimo en entrar, primero en salir)
+│  y = 3.14   │
+│  x = 42     │
+└─────────────┘
+```
+
+```rust
+fn ejemplo() {
+    let x: i32 = 42;      // 4 bytes en stack
+    let y: f64 = 3.14;    // 8 bytes en stack
+    let z: bool = true;   // 1 byte en stack
+}   // x, y, z se liberan automaticamente aqui
+```
+
+### Heap (El Monton)
+
+- Es un bloque grande de memoria **sin orden fijo**
+- Cuando pides memoria, el sistema busca un espacio libre y te da un **pointer** (direccion)
+- **Mas lento** porque tiene que buscar espacio y seguir pointers
+- El tamanio puede ser **dinamico** (crecer/decrecer en runtime)
+- En Rust se libera automaticamente via **ownership** (en C/C++ lo haces manual con malloc)
+
+```
+Stack                    Heap
+┌──────────────┐        ┌─────────────────────┐
+│ s ──────────────────> │ "Hola Mundo"        │
+│ ptr, len: 10 │        │ (10 bytes, dinamico)│
+│ capacity: 10 │        └─────────────────────┘
+└──────────────┘
+```
+
+```rust
+fn ejemplo() {
+    let s = String::from("Hola Mundo");
+    // s (en stack) tiene:
+    //   - pointer -> apunta a los bytes en el heap
+    //   - len: 10 (longitud actual)
+    //   - capacity: 10 (espacio reservado)
+    //
+    // Los bytes "Hola Mundo" estan en el heap
+
+}   // Rust llama drop(s) -> libera el heap automaticamente
+```
+
+### Por que importa en Rust?
+
+```rust
+// STACK: tipos de tamanio fijo -> Copy (se copian)
+let a = 5;
+let b = a;   // copia los 4 bytes, rapido y barato
+println!("{a} {b}");  // ambos validos
+
+// HEAP: tamanio variable -> Move (se mueven)
+let s1 = String::from("hola");
+let s2 = s1;  // solo copia el pointer (no duplica el heap)
+              // s1 se invalida para evitar double free
+// println!("{s1}"); // ERROR
+```
+
+Si Rust copiara el heap cada vez, seria lento. Si dejara dos owners apuntando al mismo heap, tendrias **double free** (liberar la misma memoria dos veces = crash). Por eso existe el sistema de **ownership**: un solo owner, una sola liberacion.
+
+| | Stack | Heap |
+|---|---|---|
+| Velocidad | Muy rapido | Mas lento |
+| Tamanio | Fijo (compile time) | Dinamico (runtime) |
+| Tipos | `i32`, `f64`, `bool`, `char`, arrays | `String`, `Vec`, `Box`, `HashMap` |
+| En Rust | Copy trait | Move semantics |
+| Liberacion | Automatica al salir del scope | Automatica via `drop()` (ownership) |
+
+Esto es lo que hace a Rust unico: **seguridad de memoria sin garbage collector**, gracias a que el compilador verifica ownership en compile time.
+
 ### Compound Types (Tipos Compuestos)
 
 **Tuple** - Agrupa valores de diferentes tipos con longitud fija:
