@@ -72,7 +72,7 @@ let referencia = &x;           // referencia apunta a "hola"
 El compilador te protege de esta situacion.
 
 
-### ## Stack vs Heap
+#### Stack vs Heap
 
 Son las dos zonas de memoria que usa tu programa:
 
