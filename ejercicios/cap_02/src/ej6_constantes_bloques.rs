@@ -62,7 +62,15 @@ mod tests {
 
     #[test]
     fn test_imc_sobrepeso() {
-        assert_eq!(categoria_imc(85.0, 1.75), "sobrepeso");
+        // 90 / (1.70 * 1.70) = 31.14 -> sobrepeso? No, eso es obesidad
+        // 80 / (1.70 * 1.70) = 27.68 -> sobrepeso (entre 25 y 30)
+        assert_eq!(categoria_imc(80.0, 1.70), "sobrepeso");
+    }
+
+    #[test]
+    fn test_imc_obesidad() {
+        // 110 / (1.70 * 1.70) = 38.06 -> obesidad (>= 30)
+        assert_eq!(categoria_imc(110.0, 1.70), "obesidad");
     }
 
     #[test]
