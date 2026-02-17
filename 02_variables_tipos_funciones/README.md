@@ -112,6 +112,36 @@ let ceros = [0; 10];            // [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 ---
 
+## Loops Basicos (Adelanto)
+
+Para iterar sobre colecciones o repetir codigo, Rust tiene loops. Aqui una introduccion basica del `for` loop que necesitaras para los ejercicios. Los loops se cubriran en detalle en el Capitulo 5.
+
+### For Loop
+
+```rust
+// Iterar sobre un rango de numeros
+for i in 0..5 {
+    println!("{}", i);  // imprime 0, 1, 2, 3, 4
+}
+
+// Iterar sobre un array con .iter()
+let numeros = [10, 20, 30, 40, 50];
+for numero in numeros.iter() {
+    println!("{}", numero);
+}
+
+// Iterar y modificar: suma de array
+let mut suma = 0;
+for &n in numeros.iter() {  // &n extrae el valor
+    suma += n;
+}
+println!("Suma: {}", suma);  // 150
+```
+
+**Nota:** Los loops se explicaran completamente en el Capitulo 5 (Control de Flujo). Por ahora, solo necesitas saber que `for elemento in coleccion.iter()` te permite recorrer cada elemento.
+
+---
+
 ## Constants
 
 Las **constants** son siempre inmutables y deben tener tipo explicito:
