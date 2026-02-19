@@ -7,23 +7,41 @@
 
 /// Retorna true si el caracter es una letra (a-z o A-Z)
 pub fn es_letra(c: char) -> bool {
-    todo!("tu código va aquí")
+    match c
+    {
+        'a'..='z' | 'A'..='Z' => true,
+        _ => false,
+    }
 }
 
 /// Retorna true si el numero cabe en un u8 (0..=255)
 pub fn cabe_en_u8(n: i32) -> bool {
-    todo!("tu código va aquí")
+    match n
+    {
+        0..=255 => true,
+        _ => false,
+    }
 }
 
 /// Convierte un bool a su representacion numerica: true -> 1, false -> 0
 pub fn bool_a_entero(b: bool) -> i32 {
-    todo!("tu código va aquí")
+    match b
+    {
+        b if b => 1,
+        _ => 0,
+    }
+
 }
 
 /// Retorna el tipo de numero como string:
 /// "positivo", "negativo" o "cero"
 pub fn clasificar_numero(n: f64) -> &'static str {
-    todo!("tu código va aquí")
+   match n
+   {
+        n if n > 0.0 => "positivo",
+        n if n < 0.0 => "negativo",
+        _ => "cero",
+   }
 }
 
 #[cfg(test)]
