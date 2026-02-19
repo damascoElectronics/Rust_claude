@@ -9,7 +9,12 @@
 /// Retorna una tupla (min, max) de dos numeros
 /// Pista: compara a y b con if, retorna (menor, mayor)
 pub fn min_max(a: i32, b: i32) -> (i32, i32) {
-    todo!("tu código va aquí")
+    match a
+    {
+        a if a < b => (a,b),
+        a if a > b => (b,a),
+        _ => (a,a),
+    }
 }
 
 /// Recibe una tupla (x, y) de un punto 2D y retorna la distancia
@@ -17,7 +22,9 @@ pub fn min_max(a: i32, b: i32) -> (i32, i32) {
 /// Distancia = (x*x + y*y) como f64, luego .sqrt()
 /// Pista: let x = punto.0 as f64;
 pub fn distancia_al_origen(punto: (i32, i32)) -> f64 {
-    todo!("tu código va aquí")
+    let Distancia:f64 = (punto.0 * punto.0 + punto.1 * punto.1).into();
+    let Distancia:f64 = Distancia.sqrt();
+    Distancia    
 }
 
 /// Recibe una tupla de 3 elementos y usa destructuring
@@ -25,19 +32,31 @@ pub fn distancia_al_origen(punto: (i32, i32)) -> f64 {
 /// Ejemplo: (1, 2, 3) -> (3, 2, 1)
 /// Pista: let (a, b, c) = tupla;
 pub fn invertir_tupla(tupla: (i32, i32, i32)) -> (i32, i32, i32) {
-    todo!("tu código va aquí")
-}
+        (tupla.2 , tupla.1, tupla.0)
+    }
 
 /// Retorna la suma de todos los elementos de un array de 5 elementos
 /// Pista: usa un for loop para iterar sobre numeros.iter()
 pub fn suma_array(numeros: [i32; 5]) -> i32 {
-    todo!("tu código va aquí")
+    let mut suma = 0;
+    for index in numeros.iter()
+    {
+        suma += index;
+    } 
+    suma
 }
 
 /// Crea y retorna un array de tamanio 5 donde todos los elementos son `valor`
 /// Pista: usa la sintaxis [valor; 5]
 pub fn crear_array_repetido(valor: i32) -> [i32; 5] {
-    todo!("tu código va aquí")
+    let mut cero: [i32; 5] = [0;5];
+    for index in 0..5
+    {
+        cero[index] = valor;
+    } 
+    cero
+
+    
 }
 
 #[cfg(test)]
